@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Rəqəmləri cəmi 10 olan 3 rəqəmli ədədlər (100-999):" << endl;
+    for (int i = 100; i <= 999; ++i) {
+        int temp_eded = i;
+        int cem = 0;
+        while (temp_eded > 0) {
+            cem += temp_eded % 10;
+            temp_eded /= 10;
+        }
+        if (cem == 10) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    return 0;
+}
