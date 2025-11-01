@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    long long cem = 0; 
+    cout << "ədəd daxil edin: ";
+    cin >> n;                                                                  
+    for (int i = 2; i <= n; i += 2) {
+        cem += (long long)i * i;                                                                      
+    }
+    cout << "1-dən " << n << "-ə qədər cüt ədədlərin kvadratları cəmi: " << cem << endl;
+    return 0;
+}
