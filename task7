@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Rəqəmlərinin kubları cəmi özünə bərabər olan ədədlər:" << endl;
+    for (int i = 1; i <= 1000; ++i) {
+        int original_eded = i;
+        int eded = i;
+        int kublar_cemi = 0;
+        while (eded > 0) {
+            int reqem = eded % 10;
+            kublar_cemi += reqem * reqem * reqem; 
+            eded /= 10;
+        }
+        if (original_eded == kublar_cemi) {
+            cout << original_eded << " ";
+        }
+    }
+    cout << endl;
+    return 0;
