@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+    long long eded;
+    int say = 0;
+    cout << "ədəd daxil edin: ";
+    cin >> eded;
+    if (eded < 0) {
+        eded = -eded;
+  }
+    if (eded == 0) {
+        say = 1;
+    } else {
+        long long temp_eded = eded;
+        while (temp_eded > 0) {
+            temp_eded /= 10;
+            say++;
+        }
+    }
+    cout << "Daxil edilən ədədin rəqəmlərinin sayı: " << say << endl;
+    return 0;
+}
