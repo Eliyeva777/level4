@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char emeliyyat;
+    double eded1, eded2; 
+    cout << "Sadə Kalkulyator" << endl;
+    cout << "Əməliyyatı daxil edin (+, -, *, /): ";
+    cin >> emeliyyat;
+    cout << "İki ədəd daxil edin: ";
+    cin >> eded1 >> eded2;
+    switch (emeliyyat) {
+        case '+':
+            cout << eded1 << " + " << eded2 << " = " << eded1 + eded2;
+            break;
+        case '-':
+            cout << eded1 << " - " << eded2 << " = " << eded1 - eded2;
+            break;
+        case '*':
+            cout << eded1 << " * " << eded2 << " = " << eded1 * eded2;
+            break;
+        case '/':
+            if (eded2 != 0) {
+                cout << eded1 << " / " << eded2 << " = " << eded1 / eded2;
+            } else {
+                cout << "Sıfıra bölmə qadağandır.";
+            }
+            break;
+        default:
+            cout << "XƏTA";
+            break;
+    }
+    cout << endl;
+    return 0;
+}
