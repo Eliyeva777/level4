@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+#include <algorithm> 
+using namespace std;
+int main() {
+    int n;
+    string binary = "";
+    cout << "ədəd daxil edin: ";
+    cin >> n;
+    if (n == 0) {
+        cout << "Binary: 0" << endl;
+        return 0;
+    }
+    int temp_n = n;
+    while (temp_n > 0) {
+        binary += to_string(temp_n % 2); 
+        temp_n /= 2;
+    }
+    reverse(binary.begin(), binary.end());
+    cout << n << " ədədinin binary forması: " << binary << endl;
+    return 0;
+}
