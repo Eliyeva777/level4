@@ -1,0 +1,33 @@
+#include <iostream>
+#include <limits>
+using namespace std;
+int main() {
+    int eded;
+    int say = 0;
+    int en_kicik = numeric_limits<int>::max(); 
+    long long cem = 0; 
+    cout << "Ədədi daxil edin:" << endl;
+    while (true) {
+        cout << "Ədəd: ";
+        cin >> eded;
+        if (eded == 0) {
+            break; 
+        }
+        cem += eded;
+        say++;
+        if (eded < en_kicik) {
+            en_kicik = eded;
+        }
+    }
+    cout << " Nəticələr" << endl;
+    if (say > 0) {
+        double ortalama = (double)cem / say;
+        cout << "Daxil edilən ədədlərin sayı: " << say << endl;
+        cout << "Ən kiçik ədəd: " << en_kicik << endl;
+        cout << "Ədədi ortası: " << ortalama << endl;
+    } else {
+        cout << "Heç bir ədəd daxil edilmədi." << endl;
+    }
+    
+    return 0;
+}
