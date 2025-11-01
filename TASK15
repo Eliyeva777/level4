@@ -1,0 +1,25 @@
+#include <iostream>
+#include <limits> 
+using namespace std;
+int main() {
+    int eded;
+    int en_boyuk = numeric_limits<int>::min(); 
+    bool eded_daxil_edilib = false; 
+    cout << "Ədədləri daxil edin:" << endl;
+    while (true) {
+        cout << "Ədəd: ";
+        cin >> eded;
+        if (eded == 0) {
+            break; 
+        }
+        eded_daxil_edilib = true;
+        if (eded > en_boyuk) {
+            en_boyuk = eded;
+        }
+    }
+    if (eded_daxil_edilib) {
+        cout << "ən böyük ədəd: " << en_boyuk << endl;
+    } else {
+        cout << "ədəd daxil edilmədi." << endl;
+    }
+    return 0;
