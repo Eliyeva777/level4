@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+bool is_palindrome(int n) {
+    int original_n = n;
+    int ters_n = 0;
+    while (n > 0) {
+        ters_n = ters_n * 10 + (n % 10);
+        n /= 10;
+    }
+    return original_n == ters_n;
+}
+int main() {
+    cout << "1-dən 1000-ə qədər palindrome ədədləri: ";
+    for (int i = 1; i <= 1000; ++i) {
+        if (is_palindrome(i)) {
+            cout << i << " ";
+        }
+    }
+    cout << endl;
+    return 0;
+}
