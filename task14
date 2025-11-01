@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int eded;         
+    int ters_eded = 0; 
+    cout << "Bir tam ədəd daxil edin: ";
+    cin >> eded;
+    int original_eded = eded; 
+    int temp_eded = eded;     
+    while (temp_eded > 0) {
+        int reqem = temp_eded % 10;      
+        ters_eded = ters_eded * 10 + reqem; 
+        temp_eded /= 10;                  
+    }
+    cout << "Daxil edilən ədəd: " << original_eded << endl;
+    cout << "Ədədin tərsi: " << ters_eded << endl;
+    if (original_eded == ters_eded) 
+        cout << original_eded << " ədədi PALİNDROMDUR (tərsi özünə bərabərdir)." << endl;
+    } else {
+        cout << original_eded << " ədədi PALİNDROM DEYİL (tərsi özünə bərabər deyil)." << endl;
+    }
+    return 0;
+}
